@@ -11,7 +11,11 @@ public class BowlingGame {
 	public BowlingGame() {
 		super();
 	}
-
+	
+	public BowlingGame(String bowlingCode) {
+		this.bowlingCode = bowlingCode;
+	}
+	
 	//use the spilt() change String to a String[]
 	private String[] spiltBowlingCode(String bowlingCode){
 		bowlingCode = bowlingCode.replace("-","0");
