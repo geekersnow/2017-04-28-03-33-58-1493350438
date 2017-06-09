@@ -6,7 +6,6 @@
 public class BowlingGame {
 
 	public String bowlingCode;
-	private String[] bowlingString;	
 
 	public BowlingGame() {
 		super();
@@ -17,9 +16,9 @@ public class BowlingGame {
 	}
 	
 	//use the spilt() change String to a String[]
-	private String[] spiltBowlingCode(String bowlingCode){
+	private String[] spiltBowlingCode(String bowlingCode){	
 		bowlingCode = bowlingCode.replace("-","0");
-		bowlingString = bowlingCode.split("\\|");
+		String[] bowlingString = bowlingCode.split("\\|");
 		return this.bowlingString;	
 	}
 	
@@ -36,7 +35,7 @@ public class BowlingGame {
 	}
 	
 	//count the sum
-	private int conutScore(char[] frame){
+	private int countScore(char[] frame){
 		int  sum = 0;
     	int[] num = new int[frame.length];
     	for(int i = 0;i< frame.length;i++){
@@ -91,7 +90,7 @@ public class BowlingGame {
 	{
 		String[] bowlingString = spiltBowlingCode(bowlingCode);
 		char[] conChar = coverToChar(bowlingString);
-		return conutScore(conChar);	
+		return countScore(conChar);	
 	}
 	
 }
